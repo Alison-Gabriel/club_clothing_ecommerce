@@ -1,13 +1,16 @@
 import "./App.css";
 
-import Header from "./components/header/header.component";
+import { BrowserRouter, Route, Routes } from "react-router";
+
+import HomePage from "./pages/home.page";
 
 const App = () => {
   return (
-    <>
-      <Header />
-      <h1>Hello World!</h1>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
